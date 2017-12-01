@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <script>
+        function guess(){
+            document.getElementById('clip').pause();
+            document.getElementById('answer').style.visibility='visible';
+        }
+        </script>
+    </head>
+    <body>
+        <audio
+        id="clip" src="/clip" autoplay controls>
+        Your browser does not support the <code>audio</code> element.
+        </audio>
+        <button onclick="guess()">Guess</button>
+        <div id="answer" style="visibility: hidden;">
+            <p>[answer]</p>
+            <audio
+            id="track" src="/track" controls>
+            Your browser does not support the <code>audio</code> element.
+            </audio>
+            <form action="/">
+                <input type="submit" value="Next">
+            </form>
+        </div>
+    </body>
+</html>
